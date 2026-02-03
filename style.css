@@ -1,0 +1,133 @@
+/*
+    Paleta de cores principal do projeto.
+    Variáveis para facilitar a manutenção e a criação de temas.
+*/
+:root {
+    --bg-dark: #2F2325; /* RGB (47, 35, 37) */
+    --rust: #A45A49; /* RGB (164, 90, 73) */
+    --peach: #E68E7B; /* RGB (230, 142, 123) */
+    --white: #FFFFFF; /* RGB (255, 255, 255) */
+    --blue: #97D4D9; /* RGB (151, 212, 217) */
+    --green: #B3DFD3; /* RGB (179, 223, 211) */
+    --yellow: #EFC764; /* RGB (239, 199, 100) */
+    --soft-pink: #FFF2E7; /* RGB (255, 242, 231) */
+}
+
+/* Reset global para evitar problemas de dimensionamento com padding e border. */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Padronização das cores dos títulos para a cor de destaque. */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--peach);
+}
+
+/*
+	Estilo global do corpo: fundo escuro, texto claro, tipografia
+	 espaçamento para adaptação ao header e footer fixos.
+*/
+body {
+	background-color: var(--bg-dark);
+	color: var(--soft-pink);
+}
+
+/*
+    Estilo global do header: fundo em tom rust, texto claro,
+	 alinhamento central, posição fixa no topo.
+*/
+header {
+	background-color: var(--rust);
+	text-align: center;
+	position: fixed;
+	padding: 1rem;
+	width: 100%;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 6rem 1rem 1rem 1rem;
+}
+
+.formTarefas {
+	display: flex;
+	gap: 0.5rem;
+	justify-content: center;
+	margin-bottom: 2rem;
+}
+
+.button-add {
+    background-color: var(--rust);
+	color: var(--soft-pink);
+    text-decoration: none;
+	font-size: 1rem;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    border: none;
+}
+.button-add:hover {
+    background-color: var(--peach);
+    color: var(--rust);
+}
+
+.input-box {
+	padding: 0.5rem;
+	border-radius: 0.5rem;
+	color: var(--soft-pink);
+	background-color: var(--bg-dark);
+	border: 1px solid var(--rust);
+	font-size: 1.2rem;
+}
+
+.input-box:focus {
+	outline: none;
+	border-color: var(--peach);
+}
+
+.listaTarefas {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.itemTarefa {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border: 1px solid var(--rust);
+	border-radius: 0.5rem;
+	padding: 1rem;
+	font-size: 1.2rem;
+	margin-bottom: 0.5rem;
+}
+
+.itemTarefa:hover {
+	border-color: var(--peach);
+}
+
+.itemTarefa.concluida span {
+	text-decoration: line-through;
+	color: var(--blue);
+}
+
+.button-delete {
+    background-color: var(--soft-pink);
+	color: var(--rust);
+    text-decoration: none;
+	font-size: 0.8rem;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    border: none;
+}
+
+.button-delete:hover {
+    background-color: var(--rust);
+	color: var(--peach);
+}
