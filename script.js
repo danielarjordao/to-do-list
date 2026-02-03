@@ -29,6 +29,9 @@ function adicionarTarefa(event) {
 	novaTarefa.appendChild(textoSpan);
 	novaTarefa.appendChild(botaoRemover);
 	listaTarefas.appendChild(novaTarefa);
+
+	// Limpa o input
+	inputTarefa.value = '';
 }
 
 // Adiciona o evento ao formulário
