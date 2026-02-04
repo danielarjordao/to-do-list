@@ -23,9 +23,17 @@
 /* Responsividade: ajustar tamanho base para mobile */
 @media (max-width: 768px) {
     html {
-        font-size: 13px;
+        font-size: 14px;
     }
+	.formTarefas {
+		flex-direction: column;
+	}
+	.itemTarefa {
+		margin-left: 6rem;
+	}
 }
+
+
 
 /* Padronização das cores dos títulos para a cor de destaque. */
 h1, h2, h3, h4, h5, h6 {
