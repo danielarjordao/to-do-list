@@ -16,8 +16,15 @@
 /* Reset global para evitar problemas de dimensionamento com padding e border. */
 * {
     box-sizing: border-box;
-    margin: 0;
+    margin: 0rem;
     padding: 0;
+}
+
+/* Responsividade: ajustar tamanho base para mobile */
+@media (max-width: 768px) {
+    html {
+        font-size: 13px;
+    }
 }
 
 /* Padronização das cores dos títulos para a cor de destaque. */
@@ -51,7 +58,7 @@ main {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	padding: 6rem 1rem 1rem 1rem;
+	padding: 6rem 2rem 2rem 2rem;
 }
 
 .formTarefas {
