@@ -27,9 +27,11 @@
     }
 	.formTarefas {
 		flex-direction: column;
+		width: 90%;
 	}
 	.itemTarefa {
 		margin-left: 6rem;
+		width: 90%;
 	}
 }
 
