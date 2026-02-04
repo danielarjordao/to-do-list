@@ -20,14 +20,24 @@ function adicionarTarefa(event) {
 	const textoSpan = document.createElement('span');
 	textoSpan.innerText = tarefaTexto;
 
+	// Cria o botão de concluir
+	const botaoConcluir = document.createElement('button');
+	botaoConcluir.className = 'button-concluir';
+	botaoConcluir.innerText = 'Concluir';
+
 	// Cria o botão de remover
 	const botaoRemover = document.createElement('button');
 	botaoRemover.className = 'button-delete';
 	botaoRemover.innerText = 'Remover';
 
+	// Cria uma div para agrupar os botões
+	const divBotoes = document.createElement('div');
+	divBotoes.appendChild(botaoConcluir);
+	divBotoes.appendChild(botaoRemover);
+
 	// Adiciona à lista
 	novaTarefa.appendChild(textoSpan);
-	novaTarefa.appendChild(botaoRemover);
+	novaTarefa.appendChild(divBotoes);
 	listaTarefas.appendChild(novaTarefa);
 
 	// Limpa o input
@@ -42,7 +52,7 @@ function removerTarefa(event) {
 	// Verifica se o elemento clicado é um botão de remoção
 	if (event.target.classList.contains('button-delete')) {
 		// Remove o elemento pai (a tarefa)
-		const tarefaParaRemover = event.target.parentElement;
+		const tarefaParaRemover = event.target.parentElement.parentElement;
 		listaTarefas.removeChild(tarefaParaRemover);
 	}
 }
@@ -53,9 +63,10 @@ listaTarefas.addEventListener('click', removerTarefa);
 // Função de concluir tarefa
 function concluirTarefa(event) {
 	// Verifica se o elemento clicado é uma tarefa
-	if (event.target.classList.contains('itemTarefa')) {
-		// Alterna a classe 'concluida'
-		event.target.classList.toggle('concluida');
+	if (event.target.classList.contains('button-concluir')) {
+		// Marca a tarefa como concluída
+		const tarefaParaConcluir = event.target.parentElement.parentElement;
+		tarefaParaConcluir.classList.toggle('concluida');
 	}
 }
 

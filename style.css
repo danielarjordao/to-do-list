@@ -83,8 +83,10 @@ main {
 	background-color: var(--bg-dark);
 	border: 1px solid var(--rust);
 	font-size: 1.2rem;
+	width: 30rem;
 }
 
+/* Estilo ao focar na caixa de entrada */
 .input-box:focus {
 	outline: none;
 	border-color: var(--peach);
@@ -94,17 +96,32 @@ main {
 	width: 100%;
 	display: flex;
 	flex-direction: column;
+	align-items: center;
 }
 
 .itemTarefa {
 	display: flex;
-	justify-content: space-between;
-	align-items: center;
+	gap: 1rem;
 	border: 1px solid var(--rust);
 	border-radius: 0.5rem;
 	padding: 1rem;
 	font-size: 1.2rem;
 	margin-bottom: 0.5rem;
+	width: 30rem;
+	margin-right: 6rem;
+}
+
+.itemTarefa span {
+	/* Permite que o span ocupe todo o espaço disponível */
+	flex: 1;
+	/* Permite que o texto quebre em várias linhas se for muito longo */
+	word-wrap: break-word;
+}
+
+.itemTarefa div {
+	display: flex;
+	gap: 0.5rem;
+	align-items: end;
 }
 
 .itemTarefa:hover {
@@ -114,6 +131,22 @@ main {
 .itemTarefa.concluida span {
 	text-decoration: line-through;
 	color: var(--blue);
+}
+
+.button-concluir {
+    background-color: var(--soft-pink);
+	color: var(--rust);
+    text-decoration: none;
+	font-size: 0.8rem;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    border: none;
+}
+
+.button-concluir:hover {
+    background-color: var(--rust);
+	color: var(--peach);
 }
 
 .button-delete {
