@@ -23,7 +23,7 @@
 /* Responsividade: ajustar tamanho base para mobile */
 @media (max-width: 768px) {
     html {
-        font-size: 7px;
+        font-size: 4px;
     }
 	.formTarefas {
 		flex-direction: column;
